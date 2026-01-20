@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #0b0f1a; color: #f8fafc; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #0b0f1a; color: #f8fafc; scroll-behavior: smooth; }
         .accent-gradient { background: linear-gradient(90deg, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .glass-card { background: rgba(30, 41, 59, 0.5); backdrop-filter: blur(10px); border: 1px border rgba(255,255,255,0.1); }
+        .glass-card { background: rgba(30, 41, 59, 0.5); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.05); }
     </style>
 </head>
 <body class="selection:bg-sky-500/30">
@@ -18,9 +18,8 @@
     <nav class="container mx-auto px-6 py-8 flex justify-between items-center">
         <div class="text-2xl font-extrabold tracking-tighter accent-gradient">H-PORT</div>
         <div class="flex items-center space-x-6 text-sm font-medium">
-            <a href="https://github.com/Hiroshimeow/hport" class="hover:text-sky-400 transition">GitHub</a>
-            <a href="https://www.npmjs.com/package/hport-tunnel" class="hover:text-sky-400 transition">NPM</a>
-            <a href="#support" class="bg-sky-600 hover:bg-sky-500 px-4 py-2 rounded-full transition">Support Me</a>
+            <a href="https://github.com/Hiroshimeow/hport" target="_blank" class="hover:text-sky-400 transition">GitHub</a>
+            <a href="https://www.npmjs.com/package/hport-tunnel" target="_blank" class="hover:text-sky-400 transition">NPM</a>
         </div>
     </nav>
     <!-- Hero Section -->
@@ -28,91 +27,87 @@
         <h1 class="text-6xl md:text-8xl font-extrabold mb-8 tracking-tight">
             Tunnel to the <br><span class="accent-gradient">Future.</span>
         </h1>
-        <p class="text-xl text-slate-400 max-w-2xl mx-auto mb-12">
+        <p class="text-xl text-slate-400 max-w-2xl mx-auto mb-12 leading-relaxed">
             Securely expose your localhost to the internet via H-Lab Cloud Edge. 
             A lightweight, high-performance ngrok alternative for modern developers.
         </p>
         
         <!-- Terminal Command -->
-        <div class="max-w-md mx-auto group cursor-pointer" onclick="navigator.clipboard.writeText('npm install -g hport-tunnel')">
+        <div class="max-w-md mx-auto mb-8 group cursor-pointer" onclick="navigator.clipboard.writeText('npm install -g hport-tunnel')">
             <div class="bg-slate-900 border border-slate-700 p-4 rounded-2xl flex justify-between items-center font-mono text-sm hover:border-sky-500 transition-all shadow-2xl">
                 <span class="text-slate-300"><span class="text-sky-400">npm install</span> -g hport-tunnel</span>
                 <i class="far fa-copy text-slate-500 group-hover:text-sky-400"></i>
             </div>
             <p class="text-xs text-slate-500 mt-3 italic">Click to copy command</p>
         </div>
+        <!-- Call to Action: Buy Me a Coffee -->
+        <a href="#support" class="inline-flex items-center bg-yellow-400 hover:bg-yellow-300 text-black font-bold px-8 py-3.5 rounded-full transition shadow-xl shadow-yellow-900/10">
+            <i class="fas fa-coffee mr-2"></i>
+            Buy Me A Coffee
+        </a>
     </header>
     <!-- Features -->
     <section class="container mx-auto px-6 py-20">
         <div class="grid md:grid-cols-3 gap-8">
-            <div class="glass-card p-10 rounded-3xl">
+            <div class="glass-card p-10 rounded-3xl hover:bg-slate-800/50 transition">
                 <i class="fas fa-bolt text-3xl text-yellow-400 mb-6"></i>
                 <h3 class="text-xl font-bold mb-3">Instant Setup</h3>
                 <p class="text-slate-400 leading-relaxed">No login required. Run one command and your local server is live globally.</p>
             </div>
-            <div class="glass-card p-10 rounded-3xl">
+            <div class="glass-card p-10 rounded-3xl hover:bg-slate-800/50 transition">
                 <i class="fas fa-shield-halved text-3xl text-sky-400 mb-6"></i>
                 <h3 class="text-xl font-bold mb-3">Edge Security</h3>
                 <p class="text-slate-400 leading-relaxed">Automatic SSL termination via Cloudflare's global edge network.</p>
             </div>
-            <div class="glass-card p-10 rounded-3xl">
+            <div class="glass-card p-10 rounded-3xl hover:bg-slate-800/50 transition">
                 <i class="fas fa-terminal text-3xl text-purple-400 mb-6"></i>
                 <h3 class="text-xl font-bold mb-3">Dev Friendly</h3>
                 <p class="text-slate-400 leading-relaxed">Built-in support for custom subdomains and WebSocket connections.</p>
             </div>
         </div>
     </section>
-    <!-- About Author (Personal Info) -->
+    <!-- About Author -->
     <section class="container mx-auto px-6 py-24 bg-slate-900/30 rounded-[3rem] border border-slate-800/50">
-        <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-12">
+        <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-12 text-center md:text-left">
             <div class="w-48 h-48 rounded-3xl bg-gradient-to-br from-sky-400 to-indigo-600 flex items-center justify-center text-6xl shadow-2xl shadow-sky-500/20">
                 <i class="fas fa-user-astronaut text-white"></i>
             </div>
-            <div class="flex-1 text-center md:text-left">
+            <div class="flex-1">
                 <h2 class="text-3xl font-bold mb-4">Meet the Developer</h2>
-                <p class="text-lg text-slate-300 mb-6">
+                <p class="text-lg text-slate-300 mb-6 leading-relaxed">
                     I'm <span class="text-white font-bold underline decoration-sky-500">Nguyen Hai Duong</span>, 
                     an AI Enthusiast and Software Engineer. My journey is driven by a passion for building tools that empower the developer community.
                 </p>
                 <div class="flex flex-wrap justify-center md:justify-start gap-3">
-                    <span class="px-4 py-1 bg-sky-500/10 text-sky-400 border border-sky-500/20 rounded-full text-sm font-bold">Hiroshima City Univ</span>
-                    <span class="px-4 py-1 bg-orange-500/10 text-orange-400 border border-orange-500/20 rounded-full text-sm font-bold">FPT University</span>
-                    <span class="px-4 py-1 bg-red-500/10 text-red-400 border border-red-500/20 rounded-full text-sm font-bold">BKHN</span>
+                    <span class="px-5 py-2 bg-sky-500/10 text-sky-400 border border-sky-500/20 rounded-full text-xs font-bold uppercase tracking-wider">Hiroshima City Univ</span>
+                    <span class="px-5 py-2 bg-red-500/10 text-red-400 border border-red-500/20 rounded-full text-xs font-bold uppercase tracking-wider">BKHN</span>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Support / Donation Section -->
+    <!-- Support Section -->
     <section id="support" class="container mx-auto px-6 py-32 text-center">
-        <h2 class="text-4xl font-extrabold mb-6">Fuel the Innovation ☕</h2>
-        <p class="text-slate-400 max-w-xl mx-auto mb-16">
+        <h2 class="text-4xl font-extrabold mb-6 tracking-tight">Support H-Lab Innovation ☕</h2>
+        <p class="text-slate-400 max-w-xl mx-auto mb-16 leading-relaxed">
             H-PORT is an open-source project maintained by a single developer. 
             If it saved your time, consider buying me a coffee to keep the H-Lab Edge nodes running.
         </p>
-        <div class="flex flex-col md:flex-row justify-center items-stretch gap-8 max-w-3xl mx-auto">
-            <!-- International Support -->
-            <div class="flex-1 glass-card p-8 rounded-3xl flex flex-col justify-between items-center border border-sky-500/30">
-                <div>
-                    <i class="fas fa-globe text-3xl text-sky-400 mb-4"></i>
-                    <h4 class="text-xl font-bold mb-2">International</h4>
-                    <p class="text-slate-500 text-sm mb-8">Support via Ko-fi or PayPal</p>
+        <div class="flex flex-col md:flex-row justify-center items-center gap-8 max-w-lg mx-auto">
+            <!-- Vietnam Support Card -->
+            <div class="w-full glass-card p-10 rounded-[2.5rem] border border-yellow-500/20 shadow-2xl shadow-yellow-500/5">
+                <div class="mb-6">
+                    <i class="fas fa-mug-hot text-4xl text-yellow-500 mb-4"></i>
+                    <h4 class="text-2xl font-bold mb-2">Buy Me a Coffee</h4>
+                    <p class="text-slate-500 text-sm">Quét mã QR để ủng hộ Hải Dương</p>
                 </div>
-                <a href="https://ko-fi.com/your_username" target="_blank" class="w-full bg-white text-black font-bold py-4 rounded-2xl hover:bg-slate-200 transition">
-                    Support on Ko-fi
-                </a>
-            </div>
-            <!-- Vietnam Support -->
-            <div class="flex-1 glass-card p-8 rounded-3xl flex flex-col justify-between items-center border border-pink-500/30">
-                <div>
-                    <i class="fas fa-heart text-3xl text-pink-500 mb-4"></i>
-                    <h4 class="text-xl font-bold mb-2">Vietnam</h4>
-                    <p class="text-slate-500 text-sm mb-4">Mời cafe qua mã QR</p>
+                
+                <div class="bg-white p-3 rounded-2xl shadow-inner inline-block mb-6">
+                    <img src="./donate-qr.jpg" alt="Donate QR" class="w-52 h-52 rounded-lg object-cover">
                 </div>
-                <!-- Hiển thị file QR của bạn -->
-                <div class="bg-white p-2 rounded-xl mb-4">
-                    <img src="./donate-qr.jpg" alt="Donate QR" class="w-40 h-40 rounded-lg">
-                </div>
-                <p class="text-xs text-slate-500 italic">Scan with any banking app</p>
+                
+                <p class="text-xs text-slate-500 italic opacity-70 leading-relaxed">
+                    Sử dụng ứng dụng Ngân hàng (VietQR) <br> hoặc Ví điện tử để quét mã.
+                </p>
             </div>
         </div>
     </section>
@@ -123,9 +118,9 @@
             <a href="https://www.npmjs.com/package/hport-tunnel" class="hover:text-white transition"><i class="fab fa-npm"></i></a>
         </div>
         <p class="text-slate-500 text-sm font-medium">
-            © 2026 H-Lab Project. Created by <span class="text-white">Nguyen Hai Duong</span> 🇻🇳
+            © 2026 H-Lab Project. Created by <span class="text-white font-bold">Nguyen Hai Duong</span> 🇻🇳
         </p>
-        <p class="text-[10px] text-slate-600 mt-2 uppercase tracking-[0.2em]">
+        <p class="text-[10px] text-slate-600 mt-3 uppercase tracking-[0.3em] font-bold">
             Powered by Cloudflare Tunnel Technology
         </p>
     </footer>
