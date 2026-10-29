@@ -1,128 +1,149 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>H-PORT | Secure Localhost Tunneling by H-Lab</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #0b0f1a; color: #f8fafc; scroll-behavior: smooth; }
-        .accent-gradient { background: linear-gradient(90deg, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .glass-card { background: rgba(30, 41, 59, 0.5); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.05); }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#111c28">
+  <meta name="description" content="H-Lab is the independent engineering practice of Hai Duong Nguyen. Applied AI, agent systems, browser automation, and software built to work outside the demo.">
+  <meta name="author" content="Hai Duong Nguyen">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hcu-lab.me/">
+  <meta property="og:title" content="H-Lab — AI that leaves the lab">
+  <meta property="og:description" content="Applied AI engineer Hai Duong Nguyen. Systems, tools, and practical research. Based in Japan, available for remote projects.">
+  <meta property="og:image" content="https://hcu-lab.me/og.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="h-lab-release" content="h-lab-home-redesign-20261029">
+  <title>H-Lab — Hai Duong Nguyen | Applied AI Engineer</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./script.js" defer></script>
 </head>
-<body class="selection:bg-sky-500/30">
-    <!-- Navigation -->
-    <nav class="container mx-auto px-6 py-8 flex justify-between items-center">
-        <div class="text-2xl font-extrabold tracking-tighter accent-gradient">H-PORT</div>
-        <div class="flex items-center space-x-6 text-sm font-medium">
-            <a href="https://github.com/Hiroshimeow/hport" target="_blank" class="hover:text-sky-400 transition">GitHub</a>
-            <a href="https://www.npmjs.com/package/hport-tunnel" target="_blank" class="hover:text-sky-400 transition">NPM</a>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container nav-container">
+      <a class="brand" href="#top" aria-label="H-Lab — go to top"><span class="brand-icon" aria-hidden="true"><b>h</b><i></i></span><span>H-LAB<span class="brand-period">.</span></span></a>
+      <span class="header-label">Independent engineering · Japan</span>
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-controls="nav-links" aria-expanded="false"><span></span><span></span></button>
+      <nav class="nav-links" id="nav-links" aria-label="Main navigation">
+        <a href="#work">Work</a><a href="#thinking">How I build</a><a href="#research">Research</a><a href="#about">About</a><a class="nav-cta" href="#contact">Start a conversation <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-atmosphere" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="hero-eyebrow"><span class="status-dot" aria-hidden="true"></span> Available for select remote projects <span class="hero-eyebrow-line"></span> Japan / Worldwide</div>
+          <p class="personal-label">Hai Duong Nguyen <span aria-hidden="true">—</span> Applied AI Engineer</p>
+          <h1 id="hero-title">AI that<br><span class="handwritten">leaves</span> the lab<span class="title-dot">.</span></h1>
+          <p class="hero-lede">From research ideas to reliable software. I design agent workflows, browser automation, and developer tools that survive contact with reality.</p>
+          <div class="hero-links"><a class="button button-light" href="#work"><span>See the work</span><span class="button-arrow" aria-hidden="true">↘</span></a><a class="button button-outline" href="mailto:haiduong8592@gmail.com?subject=Project%20conversation%20%E2%80%94%20H-Lab"><span>Let's talk</span><span aria-hidden="true">↗</span></a></div>
+          <div class="hero-signoff"><span class="signature-mark">H/</span><span>Applied AI · Systems engineering · Independent tools</span></div>
         </div>
-    </nav>
-    <!-- Hero Section -->
-    <header class="container mx-auto px-6 pt-20 pb-32 text-center">
-        <h1 class="text-6xl md:text-8xl font-extrabold mb-8 tracking-tight">
-            Tunnel to the <br><span class="accent-gradient">Future.</span>
-        </h1>
-        <p class="text-xl text-slate-400 max-w-2xl mx-auto mb-12 leading-relaxed">
-            Securely expose your localhost to the internet via H-Lab Cloud Edge. 
-            A lightweight, high-performance ngrok alternative for modern developers.
-        </p>
-        
-        <!-- Terminal Command -->
-        <div class="max-w-md mx-auto mb-8 group cursor-pointer" onclick="navigator.clipboard.writeText('npm install -g hport-tunnel')">
-            <div class="bg-slate-900 border border-slate-700 p-4 rounded-2xl flex justify-between items-center font-mono text-sm hover:border-sky-500 transition-all shadow-2xl">
-                <span class="text-slate-300"><span class="text-sky-400">npm install</span> -g hport-tunnel</span>
-                <i class="far fa-copy text-slate-500 group-hover:text-sky-400"></i>
-            </div>
-            <p class="text-xs text-slate-500 mt-3 italic">Click to copy command</p>
+        <div class="hero-stage">
+          <div class="stage-heading"><span><span class="stage-indicator"></span> Interactive system sketch</span><span>01 / 03</span></div>
+          <div class="stage-tabs" role="group" aria-label="Explore engineering disciplines">
+            <button type="button" class="stage-tab is-active" data-system="agents" aria-pressed="true">Agents</button>
+            <button type="button" class="stage-tab" data-system="automation" aria-pressed="false">Automation</button>
+            <button type="button" class="stage-tab" data-system="products" aria-pressed="false">Products</button>
+          </div>
+          <div class="stage-art" aria-live="off">
+            <svg class="system-svg" viewBox="0 0 480 345" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustrated system path from request, through reasoning, to tools and outcome">
+              <defs>
+                <pattern id="stageGrid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#344450" stroke-width=".7"/></pattern>
+                <linearGradient id="traceGradient"><stop stop-color="#a7e8dd" stop-opacity=".18"/><stop offset=".5" stop-color="#a7e8dd"/><stop offset="1" stop-color="#a7e8dd" stop-opacity=".18"/></linearGradient>
+              </defs>
+              <rect width="480" height="345" fill="url(#stageGrid)" opacity=".65"/>
+              <path class="schematic-path" d="M88 168H148Q162 168 162 154V117Q162 104 175 104H225M88 168H148Q162 168 162 181V238Q162 251 175 251H225M313 104H344Q358 104 358 118V168H388M313 251H344Q358 251 358 238V168" fill="none" stroke="#5d777a" stroke-width="2"/>
+              <path class="signal-path" d="M88 168H148Q162 168 162 154V117Q162 104 175 104H225" fill="none" stroke="url(#traceGradient)" stroke-width="3" stroke-linecap="round"/>
+              <path class="signal-path delayed" d="M313 104H344Q358 104 358 118V168H388" fill="none" stroke="url(#traceGradient)" stroke-width="3" stroke-linecap="round"/>
+              <rect x="20" y="132" width="116" height="72" rx="12" class="system-node"/><rect x="201" y="67" width="114" height="72" rx="12" class="system-node"/><rect x="201" y="215" width="114" height="72" rx="12" class="system-node"/><rect x="361" y="132" width="98" height="72" rx="12" class="system-node output-node"/>
+              <g class="node-small" fill="#8ca6ac" font-family="monospace" font-size="10" letter-spacing="1"><text x="38" y="152">01 / IN</text><text x="218" y="87">02 / THINK</text><text x="218" y="236">03 / ACT</text><text x="376" y="152">04 / OUT</text></g>
+              <g fill="#eaf2f0" font-family="Arial,sans-serif" font-size="14" font-weight="600"><text id="diagram-in" x="38" y="178">Request</text><text id="diagram-think" x="218" y="113">Agent</text><text id="diagram-act" x="218" y="262">Tools</text><text id="diagram-out" x="376" y="178">Result</text></g>
+              <circle cx="162" cy="168" r="5" fill="#a7e8dd"/><circle cx="358" cy="168" r="5" fill="#a7e8dd"/><circle cx="355" cy="168" r="18" stroke="#a7e8dd" stroke-opacity=".22" fill="none"/>
+              <g stroke="#708a8b" stroke-width="1"><path d="M22 24H42M22 24V44"/><path d="M457 24H437M457 24V44"/><path d="M22 320H42M22 320V300"/><path d="M457 320H437M457 320V300"/></g>
+            </svg>
+            <span class="stage-axis stage-axis-x">BUILD → VERIFY → OPERATE</span>
+            <span class="stage-axis stage-axis-y">H-LAB / SYSTEMS</span>
+          </div>
+          <div class="stage-foot"><div><div class="stage-foot-label">Design principle</div><p id="system-description">An agent is only as capable as its tools, permissions, and recovery paths.</p></div><span class="stage-foot-symbol" aria-hidden="true">↗</span></div>
         </div>
-        <!-- Call to Action: Buy Me a Coffee -->
-        <a href="#support" class="inline-flex items-center bg-yellow-400 hover:bg-yellow-300 text-black font-bold px-8 py-3.5 rounded-full transition shadow-xl shadow-yellow-900/10">
-            <i class="fas fa-coffee mr-2"></i>
-            Buy Me A Coffee
-        </a>
-    </header>
-    <!-- Features -->
-    <section class="container mx-auto px-6 py-20">
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="glass-card p-10 rounded-3xl hover:bg-slate-800/50 transition">
-                <i class="fas fa-bolt text-3xl text-yellow-400 mb-6"></i>
-                <h3 class="text-xl font-bold mb-3">Instant Setup</h3>
-                <p class="text-slate-400 leading-relaxed">No login required. Run one command and your local server is live globally.</p>
-            </div>
-            <div class="glass-card p-10 rounded-3xl hover:bg-slate-800/50 transition">
-                <i class="fas fa-shield-halved text-3xl text-sky-400 mb-6"></i>
-                <h3 class="text-xl font-bold mb-3">Edge Security</h3>
-                <p class="text-slate-400 leading-relaxed">Automatic SSL termination via Cloudflare's global edge network.</p>
-            </div>
-            <div class="glass-card p-10 rounded-3xl hover:bg-slate-800/50 transition">
-                <i class="fas fa-terminal text-3xl text-purple-400 mb-6"></i>
-                <h3 class="text-xl font-bold mb-3">Dev Friendly</h3>
-                <p class="text-slate-400 leading-relaxed">Built-in support for custom subdomains and WebSocket connections.</p>
-            </div>
-        </div>
+      </div>
+      <div class="container hero-bottom"><span>Scroll to explore</span><span class="hero-bottom-line" aria-hidden="true"></span><span>01 — 05</span></div>
     </section>
-    <!-- About Author -->
-    <section class="container mx-auto px-6 py-24 bg-slate-900/30 rounded-[3rem] border border-slate-800/50">
-        <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-12 text-center md:text-left">
-            <div class="w-48 h-48 rounded-3xl bg-gradient-to-br from-sky-400 to-indigo-600 flex items-center justify-center text-6xl shadow-2xl shadow-sky-500/20">
-                <i class="fas fa-user-astronaut text-white"></i>
-            </div>
-            <div class="flex-1">
-                <h2 class="text-3xl font-bold mb-4">Meet the Developer</h2>
-                <p class="text-lg text-slate-300 mb-6 leading-relaxed">
-                    I'm <span class="text-white font-bold underline decoration-sky-500">Nguyen Hai Duong</span>, 
-                    an AI Enthusiast and Software Engineer. My journey is driven by a passion for building tools that empower the developer community.
-                </p>
-                <div class="flex flex-wrap justify-center md:justify-start gap-3">
-                    <span class="px-5 py-2 bg-sky-500/10 text-sky-400 border border-sky-500/20 rounded-full text-xs font-bold uppercase tracking-wider">Hiroshima City Univ</span>
-                    <span class="px-5 py-2 bg-red-500/10 text-red-400 border border-red-500/20 rounded-full text-xs font-bold uppercase tracking-wider">BKHN</span>
-                </div>
-            </div>
-        </div>
+
+    <section class="proof-strip" aria-label="Experience and expertise">
+      <div class="container proof-grid">
+        <p class="proof-intro">A few facts, <em>not buzzwords.</em></p>
+        <div class="proof-cell"><strong>Japan</strong><span>Based / remote-ready</span></div>
+        <div class="proof-cell"><strong>Samsung R&amp;D</strong><span>2015–2020</span></div>
+        <div class="proof-cell"><strong>IEEE</strong><span>Published research · 2026</span></div>
+        <div class="proof-cell"><strong>JLPT N2</strong><span>Japanese · TOEIC 800 English</span></div>
+      </div>
     </section>
-    <!-- Support Section -->
-    <section id="support" class="container mx-auto px-6 py-32 text-center">
-        <h2 class="text-4xl font-extrabold mb-6 tracking-tight">Support H-Lab Innovation ☕</h2>
-        <p class="text-slate-400 max-w-xl mx-auto mb-16 leading-relaxed">
-            H-PORT is an open-source project maintained by a single developer. 
-            If it saved your time, consider buying me a coffee to keep the H-Lab Edge nodes running.
-        </p>
-        <div class="flex flex-col md:flex-row justify-center items-center gap-8 max-w-lg mx-auto">
-            <!-- Vietnam Support Card -->
-            <div class="w-full glass-card p-10 rounded-[2.5rem] border border-yellow-500/20 shadow-2xl shadow-yellow-500/5">
-                <div class="mb-6">
-                    <i class="fas fa-mug-hot text-4xl text-yellow-500 mb-4"></i>
-                    <h4 class="text-2xl font-bold mb-2">Buy Me a Coffee</h4>
-                    <p class="text-slate-500 text-sm">Quét mã QR để ủng hộ Hải Dương</p>
-                </div>
-                
-                <div class="bg-white p-3 rounded-2xl shadow-inner inline-block mb-6">
-                    <img src="./donate-qr.jpg" alt="Donate QR" class="w-52 h-52 rounded-lg object-cover">
-                </div>
-                
-                <p class="text-xs text-slate-500 italic opacity-70 leading-relaxed">
-                    Sử dụng ứng dụng Ngân hàng (VietQR) <br> hoặc Ví điện tử để quét mã.
-                </p>
-            </div>
+
+    <section class="work-section section-light" id="work" aria-labelledby="work-title">
+      <div class="container">
+        <div class="section-intro"><div><span class="section-kicker"><span class="kicker-index">01</span> Selected projects</span><h2 id="work-title">Proof is in<br><em>the building.</em></h2></div><p>Projects that leave the editor: deployed tools, integration layers, automation infrastructure, and products built around actual workflows.</p></div>
+
+        <article class="featured-work">
+          <div class="featured-content">
+            <div class="featured-label"><span class="feature-tag">Featured / Open source</span><span>Infrastructure</span></div>
+            <h3>Hport<span class="accent-period">.</span></h3>
+            <p>Make a local service reachable without a maze of infrastructure. A Node.js command-line tool for Cloudflare-backed edge connectivity and tunnel lifecycle management.</p>
+            <div class="stack-label"><span>Node.js</span><span>CLI</span><span>Cloudflare</span></div>
+            <div class="feature-links"><a href="https://github.com/Hiroshimeow/hport" target="_blank" rel="noopener noreferrer">Source code <span aria-hidden="true">↗</span></a><a href="./hport/">Original Hport page <span aria-hidden="true">↗</span></a></div>
+          </div>
+          <div class="featured-illustration" aria-label="Original illustrative Hport terminal and network diagram" role="img">
+            <div class="hero-terminal"><div class="terminal-chrome"><span><i></i><i></i><i></i></span><small>hport / terminal</small></div><div class="terminal-body"><p><span class="cmd">$</span> hport start</p><p class="term-muted">› establishing edge route</p><p><span class="term-green">●</span> service reachable</p><div class="term-divider"></div><p class="term-connection">localhost <span>⟶</span> edge <span>⟶</span> internet</p><p class="term-cursor">_</p></div></div><div class="terminal-orbit orbit-one"></div><div class="terminal-orbit orbit-two"></div>
+          </div>
+        </article>
+        <div class="project-list">
+          <article class="project-row"><span class="project-number">01 / AGENTS</span><div class="project-text"><h3>Agent MCP Gateway</h3><p>Authenticated MCP integration with workspace authorization. Tool access is a system design problem, not a checkbox.</p><div class="project-tech">Node.js <span>·</span> Express <span>·</span> MCP</div></div><div class="project-symbol symbol-gateway" aria-hidden="true"><span>◎</span><i></i><i></i></div><a class="project-open" href="https://github.com/Hiroshimeow/agent-mcp-gateway" target="_blank" rel="noopener noreferrer" aria-label="Agent MCP Gateway on GitHub">↗</a></article>
+          <article class="project-row"><span class="project-number">02 / AUTOMATION</span><div class="project-text"><h3>Playwright Auto</h3><p>Persistent browser control with a live viewer. Designed to make complex automation observable and usable.</p><div class="project-tech">Python <span>·</span> Chromium / CDP <span>·</span> noVNC</div></div><div class="project-symbol symbol-browser" aria-hidden="true"><div><span></span><span></span><span></span><b>▶_</b></div></div><a class="project-open" href="https://github.com/Hiroshimeow/playwright-auto" target="_blank" rel="noopener noreferrer" aria-label="Playwright Auto on GitHub">↗</a></article>
+          <article class="project-row"><span class="project-number">03 / DESKTOP</span><div class="project-text"><h3>Advance Clipboard</h3><p>A local-first desktop clipboard manager with persistent storage and a native interface for everyday retrieval.</p><div class="project-tech">Python <span>·</span> SQLite <span>·</span> PyQt6</div></div><div class="project-symbol symbol-clipboard" aria-hidden="true"><div><i></i><i></i><i></i><i></i></div></div><a class="project-open" href="https://github.com/Hiroshimeow/Advance-Clipboard" target="_blank" rel="noopener noreferrer" aria-label="Advance Clipboard on GitHub">↗</a></article>
+          <article class="project-row"><span class="project-number">04 / PRODUCT</span><div class="project-text"><h3>Lantern</h3><p>A practical file cockpit for browsing files, running commands, and moving between machines.</p><div class="project-tech">Python <span>·</span> Web UI <span>·</span> Self-hosted</div></div><div class="project-symbol symbol-lantern" aria-hidden="true"><div><span>⌁</span><span>▣</span><span>⌘</span></div></div><a class="project-open" href="https://github.com/Hiroshimeow/lantern" target="_blank" rel="noopener noreferrer" aria-label="Lantern on GitHub">↗</a></article>
         </div>
+        <a class="underlined-link" href="https://github.com/Hiroshimeow?tab=repositories" target="_blank" rel="noopener noreferrer">Browse more projects on GitHub <span aria-hidden="true">↗</span></a>
+      </div>
     </section>
-    <!-- Footer -->
-    <footer class="container mx-auto px-6 py-12 border-t border-slate-800 text-center">
-        <div class="flex justify-center space-x-8 mb-8 text-slate-400 text-xl">
-            <a href="https://github.com/Hiroshimeow/hport" class="hover:text-white transition"><i class="fab fa-github"></i></a>
-            <a href="https://www.npmjs.com/package/hport-tunnel" class="hover:text-white transition"><i class="fab fa-npm"></i></a>
+
+    <section class="thinking-section" id="thinking" aria-labelledby="thinking-title">
+      <div class="container">
+        <div class="section-intro thinking-intro"><div><span class="section-kicker"><span class="kicker-index">02</span> The approach</span><h2 id="thinking-title">The demo is<br><em>the easy part.</em></h2></div><p>The difficult part is everything that makes software useful after the first successful run.</p></div>
+        <div class="principle-list">
+          <div class="principle"><span>01</span><div><h3>Understand the constraint.</h3><p>Start with the real user, the system boundary, and the failure mode — not the technology trend.</p></div><div class="principle-glyph" aria-hidden="true">⌖</div></div>
+          <div class="principle"><span>02</span><div><h3>Make behavior observable.</h3><p>Trace tool calls, capture meaningful state, and handle unexpected responses without guessing.</p></div><div class="principle-glyph" aria-hidden="true">⌁</div></div>
+          <div class="principle"><span>03</span><div><h3>Build for the second run.</h3><p>Maintainable interfaces, tests, and recoverable automation matter more than a polished one-off.</p></div><div class="principle-glyph" aria-hidden="true">⟲</div></div>
         </div>
-        <p class="text-slate-500 text-sm font-medium">
-            © 2026 H-Lab Project. Created by <span class="text-white font-bold">Nguyen Hai Duong</span> 🇻🇳
-        </p>
-        <p class="text-[10px] text-slate-600 mt-3 uppercase tracking-[0.3em] font-bold">
-            Powered by Cloudflare Tunnel Technology
-        </p>
-    </footer>
+      </div>
+    </section>
+
+    <section class="research-section section-light" id="research" aria-labelledby="research-title"><div class="container research-grid">
+      <div><span class="section-kicker"><span class="kicker-index">03</span> Research</span><h2 id="research-title">Curiosity,<br><em>measured.</em></h2><div class="spectrum-illustration" role="img" aria-label="Original abstract spectral bands illustration"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div></div>
+      <div class="publication"><p class="publication-meta">First author / IEEE · IEVC 2026</p><h3>TABSUNet: Task-Aware Band Selection for Lightweight Hyperspectral Road Scene Segmentation</h3><p>Research on choosing the information that matters for efficient road-scene segmentation. A reminder that the best model is the one that respects the constraints of the job.</p><a class="underlined-link" href="https://doi.org/10.1109/IEVC69170.2026.11508619" target="_blank" rel="noopener noreferrer">View publication and DOI <span aria-hidden="true">↗</span></a></div>
+    </div></section>
+
+    <section class="about-section section-light" id="about" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div class="about-lead"><span class="section-kicker"><span class="kicker-index">04</span> The person behind the tools</span><h2 id="about-title">Research brain.<br><em>Builder's hands.</em></h2><p>I'm Hai Duong Nguyen, an applied AI engineer based in Japan. My path spans industry R&amp;D, intelligent systems research, and software built for everyday use.</p><a class="underlined-link" href="https://github.com/Hiroshimeow" target="_blank" rel="noopener noreferrer">Meet me on GitHub <span aria-hidden="true">↗</span></a></div>
+        <div class="about-history">
+          <h3>Experience</h3><div class="history-line"><time>2026 — Now</time><div><strong>AI Engineer</strong><p>Applied AI engineering and automation.</p></div></div><div class="history-line"><time>2015 — 2020</time><div><strong>R&amp;D Engineer · Samsung</strong><p>Industry research and development.</p></div></div>
+          <h3>Education</h3><div class="history-line"><time>Graduate</time><div><strong>Hiroshima City University</strong><p>Intelligent Systems Engineering / AI.</p></div></div><div class="history-line"><time>2015</time><div><strong>Hanoi University of Science and Technology</strong><p>Electronic and Telecommunication Engineering.</p></div></div>
+          <div class="languages"><span>Japanese · JLPT N2</span><span>English · TOEIC 800</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact" aria-labelledby="contact-title"><div class="container">
+      <div class="contact-overline"><span><span class="kicker-index">05</span> Let's make something useful</span><span class="available-pill"><i aria-hidden="true"></i> Available for remote projects</span></div>
+      <h2 id="contact-title">Something worth<br><em>building?</em></h2>
+      <div class="contact-row"><p>Looking for help with an AI system, a developer tool, or a tricky integration? Start with the problem you want to solve.</p><a class="contact-link" href="mailto:haiduong8592@gmail.com?subject=H-Lab%20project%20inquiry">haiduong8592@gmail.com <span aria-hidden="true">↗</span></a></div>
+    </div></section>
+  </main>
+  <footer class="footer"><div class="container footer-content"><a class="footer-brand" href="#top">H-LAB<span>.</span></a><p>Hai Duong Nguyen · Independent engineering practice · Japan</p><div><a href="https://github.com/Hiroshimeow" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="./hport/">Hport ↗</a><a href="#top">Top ↑</a></div><small>© <span id="year">2026</span> H-Lab</small></div></footer>
 </body>
 </html>
